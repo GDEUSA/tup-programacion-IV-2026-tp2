@@ -7,10 +7,10 @@ app.use(express.json());
 
 // Configuración de la base de datos
 const dbConfig = {
-  host: 'localhost',
-  user: 'root', // usuario de MySQL
-  password: 'ADMIN123', // contraseña de MySQL
-  database: 'tp2_progIV' // nombre de la base de datos
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_DATABASE
 };
 
 // ==========================================
